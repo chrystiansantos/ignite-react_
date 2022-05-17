@@ -1,6 +1,6 @@
 # dt.Money 💰
 
-#### Um simples sisteminha implementando focando bastante em **componentização**, onde o usuário conseguira cadastrar entradas e saídas, e assim sendo fazendo uma gestão dos seus gastos mensais. Foi se utilizado **TypeScript, Style-Components, Context-Api** e bastante **props** com o objetivo de se conceituar bastente o conceito e saber até quanto o mesmo deverá ser utilizado
+Um simples sisteminha implementando focando bastante em **componentização**, onde o usuário conseguirá cadastrar entradas e saídas, e assim sendo fazendo uma gestão dos seus gastos mensais. Foi se utilizado **TypeScript, Style-Components, Context-Api** e bastante **props** com o objetivo de se conceituar bastente o conceito e saber até quanto o mesmo deverá ser utilizado
 
 ## Installation
 
