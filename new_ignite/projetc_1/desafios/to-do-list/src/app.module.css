@@ -1,0 +1,11 @@
+.mainContainer {
+  max-width: 736px;
+  margin: auto;
+}
+
+.formContent {
+  display: flex;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+

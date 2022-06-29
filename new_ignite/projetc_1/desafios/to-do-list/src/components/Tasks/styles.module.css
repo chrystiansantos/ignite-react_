@@ -1,0 +1,58 @@
+.container {}
+
+.headerTask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.headerTask div {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.headerTask div strong {
+  margin-right: 0.5rem
+}
+
+.containerTaskInfo strong {
+  color: var(--blue)
+}
+
+.containerTaskInfo span {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerTaskProgress strong {
+  color: var(--purple)
+}
+
+.containerTaskProgress span {
+  background-color: var(--gray-400);
+  padding: 0.125rem 0.75rem;
+  border-radius: 1.5rem;
+}
+
+.contentEmpty {
+  margin-top: 1.5rem;
+  color: var(--gray-300);
+  border-top: 1px solid var(--gray-400);
+  height: 244px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentEmpty img {
+  margin-bottom: 2rem;  
+}

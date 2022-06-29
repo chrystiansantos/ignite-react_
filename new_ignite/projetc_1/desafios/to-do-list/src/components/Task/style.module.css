@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 0.75rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup label {
+  margin-top: 4px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+}
+
+.inputGroup label::before {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  content: '';
+  background-color: #5562eb;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+
+.inputGroup label::after {
+  width: 20px;
+  height: 20px;
+  content: '';
+  border: 2px solid var(--blue);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: -1px -1px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  transition: all 200ms ease-in;
+}
+
+.inputGroup input:checked~label {
+  color: #fff;
+}
+
+.inputGroup input:checked~label::after {
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+}
+
+.inputGroup input {
+  display: none;
+}
+
+.container span {
+  flex: 1;
+}
+
+.taskFinish {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.container button {
+  background-color: transparent;
+  border: none;
+  color: var(--gray-300);
+}
