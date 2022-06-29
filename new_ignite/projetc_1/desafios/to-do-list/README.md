@@ -6,6 +6,7 @@ Primeiro desáfio do Ignite-2022. Com intuito de avalizar os seguintes conhecime
  - Hooks
  - Componentizacão
  - CSS
+ - LocalStorage
 
 ## Executando:
 
