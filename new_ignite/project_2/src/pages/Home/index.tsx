@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { Play } from 'phosphor-react';
 import { useForm } from 'react-hook-form';
-
+// import { zodResolver } from '@hookform/resolvers/zod';
+import * as zod from 'zod';
 import {
   CountdownContainer,
   FormContainer,
@@ -12,11 +13,34 @@ import {
   TaskInput,
 } from './styles';
 
-export function Home() {
-  const { register, handleSubmit, watch } = useForm();
+const newCycleFormValidationSchema = zod.object({
+  task: zod.string().min(1, 'Informe a tarefa'),
+  minutesAmount: zod
+    .number()
+    .min(5, 'Ciclo precisa ser de no minímo 5 minutos')
+    .max(60, 'Ciclo precisa ser de no maxímo 60 minutos'),
+});
 
-  function handleCreateNewCicle(data) {
-    console.log(data);
+type INewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>;
+
+export function Home() {
+  // const { register, handleSubmit, watch, formState } = useForm({
+  //   resolver: zodResolver(newCycleFormValidationSchema),
+  // });
+  const { register, handleSubmit, watch, reset } = useForm<INewCycleFormData>({
+    defaultValues: {
+      task: '',
+      minutesAmount: 5,
+    },
+  });
+
+  function handleCreateNewCicle(data: INewCycleFormData) {
+    try {
+      console.log(data);
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const isSubmitDisabled = watch('task') === '';
