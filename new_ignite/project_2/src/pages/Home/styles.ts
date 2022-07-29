@@ -35,6 +35,7 @@ const BaseInput = styled.input`
   font-weight: bold;
   font-size: inherit;
   padding: 0 0.5rem;
+  color: ${({ theme }) => theme['gray-100']};
 
   &::placeholder {
     color: ${({ theme }) => theme['gray-500']};
@@ -48,6 +49,10 @@ const BaseInput = styled.input`
 
 export const TaskInput = styled(BaseInput)`
   flex: 1;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 `;
 
 export const MinutesAmountInput = styled(BaseInput)`
