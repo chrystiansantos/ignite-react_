@@ -13,5 +13,6 @@ export const CoffeList = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    margin-bottom: 9rem;
   }
 `;
